@@ -20,7 +20,6 @@ for i in open('data','r'):
 
     elif a:=re.match('dir (.+)',i):
         traverse(d,cur)[a[1]]={}
-
 e=[]
 
 def size(a):
@@ -33,9 +32,10 @@ def trav(cur):
             return a
 
     g = sum(trav(cur+[i]) for i in a)
-    
     e.append(g)
+    
     return g
         
 trav(['/'])
+print(sum(i for i in e if i<=100000))
 print(sorted([i for i in e if i+40000000>size(d)])[0])

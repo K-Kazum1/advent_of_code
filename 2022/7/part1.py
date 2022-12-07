@@ -34,3 +34,4 @@ def trav(cur):
         
 trav(['/'])
 print(sum(i for i in e if i<=100000))
+print(sorted([i for i in e if i+40000000>size(d)])[0])
