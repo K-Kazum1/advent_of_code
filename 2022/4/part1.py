@@ -1,4 +1,3 @@
-
 a =0
 ran = lambda a,b:range(a,b+1)
 
